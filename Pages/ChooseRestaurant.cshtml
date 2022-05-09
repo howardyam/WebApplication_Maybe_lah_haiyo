@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication_Maybe_lah_haiyo.Pages.ChooseRestaurantModel
+@{
+}
+
+<div class="text-center">
+	<div class="mainText">
+		<h1 class="display-4 text-capitalize text-black">
+			Choose restaurant.
+		</h1>
+	</div>
+</div>
+
+@foreach(var R in Model.RestaurantExample)
+{
+	<div class="col-4 mb-5">
+        <h2>@R.RestaurantName</h2>
+        <a class="btn btn-primary mt-1" asp-area="" asp-page="ChooseOrder">Order</a>
+	</div>
+}
