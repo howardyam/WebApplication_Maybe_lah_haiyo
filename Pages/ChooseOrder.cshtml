@@ -1,12 +1,12 @@
 ﻿@page
-@model WebApplication_Maybe_lah_haiyo.Pages.ChooseOrderModel
+@model WebApplication_Maybe_lah_haiyo.Pages.ChooseMenu
 @{
 }
 
 <div class="text-center">
 	<div class="mainText">
 		<h1 class="display-4 text-capitalize text-black">
-			@Model.RestaurantName
+			@Model.R_ID: @Model.RestaurantName
 		</h1>
 		<h2 class="display-4 text-capitalize text-black">
 			Choose orders.
@@ -14,7 +14,7 @@
 	</div>
 </div>
 
-@foreach(var M in Model.MenuExample)
+@foreach(var M in Model.MenuDB)
 {
 	<div class="col-4 mb-5">
         <h2>@M.MenuName</h2>

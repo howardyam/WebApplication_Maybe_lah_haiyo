@@ -1,5 +1,5 @@
 ﻿@page
-@model WebApplication_Maybe_lah_haiyo.Pages.ChooseRestaurantModel
+@model WebApplication_Maybe_lah_haiyo.Pages.ChooseRestaurant
 @{
 }
 
@@ -11,10 +11,10 @@
 	</div>
 </div>
 
-@foreach(var R in Model.RestaurantExample)
+@foreach(var R in Model.RestaurantsDB)
 {
 	<div class="col-4 mb-5">
         <h2>@R.RestaurantName</h2>
-        <a class="btn btn-primary mt-1" asp-area="" asp-page="ChooseOrder">Order</a>
+        <a class="btn btn-primary mt-1" asp-area="" asp-page="ChooseOrder" asp-route-R_ID="@R.R_ID" asp-route-RestaurantName="@R.RestaurantName"> Order</a>
 	</div>
 }
