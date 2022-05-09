@@ -8,6 +8,8 @@ namespace WebApplication_Maybe_lah_haiyo.Pages
     {
         [BindProperty]
         public int R_ID { get; set; }//This should be get from page ChooseRestaurant.
+        [BindProperty]
+        public string RestaurantName { get; set; }//This should be get from page ChooseRestaurant.
 
         public List<ChooseOrderModel> Menus = new List<ChooseOrderModel>();
         public List<ChooseOrderModel> MenuExample { get; set; }
